@@ -132,7 +132,10 @@ int main() // 엔트리 포인트(코드가 시작되는 곳)
     */
 
     // 2번. - Random으로 해보기
-
+    /*printf("□□□□□□□□\n");
+    printf("□ □      □ □\n");
+    printf("□      □    □\n");
+    printf("□□□□□□□□\n");*/
 
     // 3번.
     /*int num1, num2, temp;
