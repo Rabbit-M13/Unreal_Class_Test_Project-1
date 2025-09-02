@@ -68,49 +68,143 @@ Ctrl + K + U : 블럭 영억 주석 해제
 
 int main() // 엔트리 포인트(코드가 시작되는 곳)
 {
-    printf("Hello\tWorld!\n");  // C 출력 방법 -> 언리얼에서도 얘를 써요
-    printf("김우빈\t");        // ""안에 \n(이스케이프 시퀀스) 줄 바꿈
-    printf("98년생입니다.\n");
+    //printf("Hello\tWorld!\n");  // C 출력 방법 -> 언리얼에서도 얘를 써요
+    //printf("김우빈\t");        // ""안에 \n(이스케이프 시퀀스) 줄 바꿈
+    //printf("98년생입니다.\n");
 
-    int number1 = 0;
-    int number2 = 0; // 변수는 선언과 함께 정의해주는 것이 좋다.
-    printf("숫자1을 입력하시오: ");
-    std::cin >> number1;
-    printf("숫자2을 입력하시오: ");
-    std::cin >> number2;
-    int number3 = number1 + number2;
-    printf("두 숫자의 합은 %d입니다.", number3);
+    //int number1 = 0;
+    //int number2 = 0; // 변수는 선언과 함께 정의해주는 것이 좋다.
+    //printf("숫자1을 입력하시오: ");
+    //std::cin >> number1;
+    //printf("숫자2을 입력하시오: ");
+    //std::cin >> number2;
+    //int number3 = number1 + number2;
+    //printf("두 숫자의 합은 %d입니다.", number3);
 
-    // 이스케이프 시퀀스
-    // \n : 줄바꾸기(개행문자) new Line!
-    // \t : 탭 넣기
-    // \" : 쌍따옴표 한 개
-    // \\ : 백슬래시 한 개
-    // \r : 캐리지 리턴(윈도우에서는 X / 리눅스에서는 중요) :: 옛날 타자기의 잔재, 줄 바뀐 뒤 맨 앞으로 이동
+    //// 이스케이프 시퀀스
+    //// \n : 줄바꾸기(개행문자) new Line!
+    //// \t : 탭 넣기
+    //// \" : 쌍따옴표 한 개
+    //// \\ : 백슬래시 한 개
+    //// \r : 캐리지 리턴(윈도우에서는 X / 리눅스에서는 중요) :: 옛날 타자기의 잔재, 줄 바뀐 뒤 맨 앞으로 이동
 
-    // std::cout << "Hello World!\n"; C++ 출력 방법 -> 얘를 안쓴다 왜냐, 언리얼은 위에 꺼 쓴다.
+    //// std::cout << "Hello World!\n"; C++ 출력 방법 -> 얘를 안쓴다 왜냐, 언리얼은 위에 꺼 쓴다.
 
-    // int num = 0; number라는 이름을 가진 int(integer)변수를 선언하고 거기에 0을 대입
-    int num;
-    num = 0;
+    //// int num = 0; number라는 이름을 가진 int(integer)변수를 선언하고 거기에 0을 대입
+    //int num;
+    //num = 0;
 
-    // int: 정수형(소수점이 없는 숫자)
-    num = 5.3; // 5 저장
-    num = 5 / 2; // 2 저장
-    // C++에서는 소수점 버림
+    //// int: 정수형(소수점이 없는 숫자)
+    //num = 5.3; // 5 저장
+    //num = 5 / 2; // 2 저장
+    //// C++에서는 소수점 버림
 
-    scanf("%d", &num); // 원래 C 문법에는 맞으나, VS가 막는다. 왜냐, 다른 메모리를 침범할 여지가 있음
-    printf("입력한 숫자는(C 스타일) : %d\n", num);
+    //scanf("%d", &num); // 원래 C 문법에는 맞으나, VS가 막는다. 왜냐, 다른 메모리를 침범할 여지가 있음
+    //printf("입력한 숫자는(C 스타일) : %d\n", num);
 
-    std::cin >> num; // 숫자를 하나 입력 받기(C++ 스타일)
-    printf("입력한 숫자는(C++ 스타일) : %d\n", num);
+    //std::cin >> num; // 숫자를 하나 입력 받기(C++ 스타일)
+    //printf("입력한 숫자는(C++ 스타일) : %d\n", num);
 
-    // 프로그램을 실행했을 때 나이를 물어보고 입력받은 숫자를 그대로 출력
-    int age = 0;
-    printf("당신의 나이를 입력해주세요 : ");
-    std::cin >> age;
-    printf("당신의 나이는 : %d\n", age);
+    //// 프로그램을 실행했을 때 나이를 물어보고 입력받은 숫자를 그대로 출력
+    //int age = 0;
+    //printf("당신의 나이를 입력해주세요 : ");
+    //std::cin >> age;
+    //printf("당신의 나이는 : %d\n", age);
+
+    // 1번. - Height 사용해서 수정해보기
+    /*for (int i = 1; i < 4; i++) {
+        for (int k = 3; k-i > 0; k--) {
+            printf(" ");
+        }
+        for (int l = 1; l < i*2; l++) {
+            printf("*");
+        }
+        printf("\n");
+    }*/
+    /*
+    * 
+    * 1 => 2
+    * 2 => 1
+    * 3 => 0
+       *
+      ***
+     *****
+    */
+
+    // 2번. - Random으로 해보기
+
+
+    // 3번.
+    /*int num1, num2, temp;
+    printf("첫 번째 숫자 입력: ");
+    std::cin >> num1;
+    printf("두 번째 숫자 입력: ");
+    std::cin >> num2;
+    temp = num1;
+    num1 = num2;
+    num2 = temp;
+    printf("\n스왑 후 첫 번째 숫자는: %d\n스왑 후 두 번째 숫자는: %d", num1, num2);*/
+
+    // 4번.
+   /* int sqrWidth, sqrHeight, sqrArea;
+    printf("사각형의 가로 길이 입력: ");
+    std::cin >> sqrWidth;
+    printf("사각형의 세로 길이 입력: ");
+    std::cin >> sqrHeight;
+    sqrArea = sqrHeight * sqrWidth;
+    printf("사각형의 넓이는: %d\n", sqrArea);*/
+
+    // 5번.
+    /*int divideNum1, divideNum2, remainder;
+    printf("첫 번째 숫자를 입력하세요 : ");
+    std::cin >> divideNum1;
+    printf("두 번째 숫자를 입력하세요 : ");
+    std::cin >> divideNum2;
+    remainder = divideNum1 - ((divideNum1 / divideNum2)* divideNum2);
+
+    printf("첫 번째 숫자에서 두 번째 숫자를 나눈 나머지는: %d", remainder);*/
+
+    // 6번.
+    // 60sec , 3600sec
+    // 72111초 => 20시간 / 1분 / 51초
+    /*int hour, min, sec, inputTime;
+    printf("계산할 초를 입력하세요 : ");
+    std::cin >> inputTime;
+    hour = inputTime / 3600;
+    inputTime = inputTime - hour * 3600;
+    min = inputTime / 60;
+    inputTime = inputTime - min * 60;
+    sec = inputTime;
+    printf("입력하신 시간은 : %d시 %d분 %d초입니다. ", hour, min, sec);*/
     
+    // 7번.
+//int total, fiveHun, hun, fif, ten;
+//printf("계산하실 금액을 입력 : ");
+//std::cin >> total;
+//fiveHun = total / 500;
+//total = total % 500;
+//hun = total / 100;
+//total = total % 100;
+//fif = total / 50;
+//total = total % 50;
+//ten = total / 10;
+//total = total % 500;
+//printf("500원: %d개, 100원: %d개, 50원: %d개, 10원: %d개", fiveHun, hun, fif, ten);
+
+
+    // 8번.
+//int threedigitnum, first, second, third;
+//printf("세자리 숫자를 입력 : ");
+//std::cin >> threedigitnum;
+//
+//first = threedigitnum / 100;
+//threedigitnum = threedigitnum % 100;
+//second = threedigitnum / 10;
+//threedigitnum = threedigitnum % 10;
+//third = threedigitnum / 1;
+//threedigitnum = threedigitnum % 1;
+//
+//printf("100의 자리: %d, 10의 자리: %d, 1의 자리: %d", first, second, third);
 
 
     return 0;
